@@ -84,11 +84,11 @@ let show=[
 ]
 
 function national (noffersarr){
- 
+  list.innerHTML=""
 let container= noffersarr.forEach((ele)=>{
 let div_peri=document.createElement("div")
-// list.innerHTML=""
-div_peri.innerHTML=""
+// 
+// div_peri.innerHTML=""
 div_peri.className="classes"
 let div_peri_img=document.createElement("img")
 div_peri_img.src= ele.img;

@@ -588,7 +588,7 @@ let div_peri_addtocart=document.createElement("button")
 div_peri_addtocart.className="peri_button";
 div_peri_addtocart.innerHTML=" Add to Cart";
 div_peri_addtocart.addEventListener("click", function(){
-    cartfunc(product,i);
+    cartfunc(ele);
 })
 
 let div_peri_delete=document.createElement("button")
@@ -611,23 +611,19 @@ div_peri_offer,btndiv)
 //  function for cart page
 let localdata=[];
  function savedatatolocal(){
-localStorage.setItem("localdata", JSON.stringify(localdata))
+localStorage.setItem("cartdata", JSON.stringify(localdata))
 
 }
 
-function cartfunc(arr,index){
+function cartfunc(ele){
 
-    let obj={
-       img:arr[index].img ,
-       quantity:arr[index].quantity,
-       veg_nonveg:arr[index].veg_nonveg ,
-       rupees: arr[index].rupees,
-       offer: arr[index].offer,
-    }
- localdata.push(obj);
- console.log(localdata)
- savedatatolocal();
+ localdata.push(ele);
 
+ savedatatolocal()
+// console.log(ele)
+//  console.log(cartdata)
+
+ 
 }
 
  
